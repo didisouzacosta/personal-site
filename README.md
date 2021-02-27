@@ -1,2 +1,1 @@
-# Site pessoal
-Site pessoal para divulgar contatos e redes sociais
+This is a starter template for [Learn Next.js](https://nextjs.org/learn).
