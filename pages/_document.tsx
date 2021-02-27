@@ -13,16 +13,35 @@ class MyDocument extends Document {
   }
 
   render() {
+    const title = "Adriano | iOS and React Native Developer";
+
     return (
       <Html lang="pt-br">
         <Head>
+          <link rel="icon" href="/favicon.ico" />
+          <meta
+            name="description"
+            content="Learn how to build a personal website using Next.js"
+          />
+          <meta
+            property="og:image"
+            content={`https://og-image.vercel.app/${encodeURI(
+              title
+            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+          />
+          <meta name="og:title" content={title} />
+          <meta name="twitter:card" content="summary_large_image" />
           <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=GTM-PFN7C5M"
+          ></script>
+          <script
+            async
             dangerouslySetInnerHTML={{
-              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-PFN7C5M');`,
+              __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'GTM-PFN7C5M');`,
             }}
           />
         </Head>
