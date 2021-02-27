@@ -1,7 +1,9 @@
 .container {
   max-width: 36rem;
-  padding: 0 1rem;
-  margin: 3rem auto 6rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header {
