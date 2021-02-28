@@ -9,10 +9,10 @@ Projeto pessoal para disponibilizar meus principais contatos pessoais e projeto 
 3. Jest
 4. Github Actions
 
-## Host
+### Host
 
 1. Vercel
 
-## Domain
+### Domain
 
 1. Google Domains
