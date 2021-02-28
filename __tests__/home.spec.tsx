@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
-import Home from "./../Home";
+import Home from "../pages/Home";
 
 describe("Home", () => {
   it("ensure title text consistency", () => {
