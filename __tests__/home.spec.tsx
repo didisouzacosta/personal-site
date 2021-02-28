@@ -23,7 +23,7 @@ describe("Home", () => {
     render(<Home />);
 
     expect(screen.getByTestId("about")).toHaveTextContent(
-      "Além de um cara legal, trabalho criando soluções mobile utilizando Swift e React Native (também tenho um dedido no design rsrs). E levo a vida devagar curtindo muito 🐶 🎮 🍿 ☕"
+      "Além de um cara legal, trabalho criando soluções mobile utilizando Swift e React Native (também tenho um dedido no design rsrs). Levo a vida devagar curtindo muito 🐶 🎮 🍿 ☕"
     );
   });
 
