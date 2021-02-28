@@ -45,8 +45,8 @@ const Home = () => {
       <section className={styles.infos}>
         <p data-testid="about">
           Além de um cara legal, trabalho criando soluções mobile utilizando
-          Swift e React Native (também tenho um dedido no design rsrs). E levo a
-          vida devagar curtindo muito 🐶 🎮 🍿 ☕
+          Swift e React Native sempre com muito interesse em UI/UX. Levo a vida
+          devagar curtindo muito 🐶 🎮 🍿 ☕
         </p>
         <Link href="https://dev.to/didisouzacosta" replace={false}>
           <a data-testid="social-link" target="_blank" rel="noreferrer">
