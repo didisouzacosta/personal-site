@@ -48,12 +48,8 @@ const Home = () => {
           Swift e React Native (também tenho um dedido no design rsrs). E levo a
           vida devagar curtindo muito 🐶 🎮 🍿 ☕
         </p>
-        <Link
-          data-testid="devto-link"
-          href="https://dev.to/didisouzacosta"
-          replace={false}
-        >
-          <a target="_blank" rel="noreferrer">
+        <Link href="https://dev.to/didisouzacosta" replace={false}>
+          <a data-testid="social-link" target="_blank" rel="noreferrer">
             <Image
               priority
               src="/icons/devto_icon.png"
@@ -63,11 +59,8 @@ const Home = () => {
             />
           </a>
         </Link>
-        <Link
-          data-testid="github-link"
-          href="https://github.com/didisouzacosta"
-        >
-          <a target="_blank" rel="noreferrer">
+        <Link href="https://github.com/didisouzacosta">
+          <a data-testid="social-link" target="_blank" rel="noreferrer">
             <Image
               priority
               src="/icons/github_icon.png"
@@ -77,11 +70,8 @@ const Home = () => {
             />
           </a>
         </Link>
-        <Link
-          data-testid="linkedin-link"
-          href="https://www.linkedin.com/in/adrianosouzacosta/"
-        >
-          <a target="_blank" rel="noreferrer">
+        <Link href="https://www.linkedin.com/in/adrianosouzacosta/">
+          <a data-testid="social-link" target="_blank" rel="noreferrer">
             <Image
               priority
               src="/icons/linkedin_icon.png"
