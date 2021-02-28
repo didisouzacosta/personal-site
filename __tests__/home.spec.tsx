@@ -33,6 +33,7 @@ describe("Home", () => {
     const links = screen.getAllByTestId("social-link");
 
     expect(links.length).toBe(3);
+
     expect(links[0].getAttribute("href")).toBe("https://dev.to/didisouzacosta");
     expect(links[1].getAttribute("href")).toBe(
       "https://github.com/didisouzacosta"
