@@ -35,16 +35,24 @@ const Home = () => {
           width={144}
           alt={name}
         />
-        <h1 className={styles.heading}>{name}</h1>
-        <p className={styles.subHeading}>Desenvolvedor iOS e React Native</p>
+        <h1 data-testid="title" className={styles.heading}>
+          {name}
+        </h1>
+        <p data-testid="subtitle" className={styles.subHeading}>
+          Desenvolvedor iOS e React Native
+        </p>
       </header>
       <section className={styles.infos}>
-        <p>
+        <p data-testid="about">
           Além de um cara legal, trabalho criando soluções mobile utilizando
           Swift e React Native (também tenho um dedido no design rsrs). E levo a
           vida devagar curtindo muito 🐶 🎮 🍿 ☕
         </p>
-        <Link href="https://dev.to/didisouzacosta" replace={false}>
+        <Link
+          data-testid="devto-link"
+          href="https://dev.to/didisouzacosta"
+          replace={false}
+        >
           <a target="_blank" rel="noreferrer">
             <Image
               priority
@@ -55,7 +63,10 @@ const Home = () => {
             />
           </a>
         </Link>
-        <Link href="https://github.com/didisouzacosta">
+        <Link
+          data-testid="github-link"
+          href="https://github.com/didisouzacosta"
+        >
           <a target="_blank" rel="noreferrer">
             <Image
               priority
@@ -66,7 +77,10 @@ const Home = () => {
             />
           </a>
         </Link>
-        <Link href="https://www.linkedin.com/in/adrianosouzacosta/">
+        <Link
+          data-testid="linkedin-link"
+          href="https://www.linkedin.com/in/adrianosouzacosta/"
+        >
           <a target="_blank" rel="noreferrer">
             <Image
               priority
