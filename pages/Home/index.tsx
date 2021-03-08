@@ -34,6 +34,7 @@ const Home = () => {
           height={144}
           width={144}
           alt={name}
+          objectFit="cover"
         />
         <h1 data-testid="title" className={styles.heading}>
           {name}
