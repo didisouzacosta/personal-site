@@ -5,7 +5,7 @@ import Head from "next/head";
 import styles from "./styles.module.css";
 
 const name = "Adriano Souza Costa";
-const title = "Adriano | iOS and React Native Developer";
+const title = "Adriano | Desenvolvedor mobile Swift/React Native";
 
 const Home = () => {
   return (
@@ -13,23 +13,32 @@ const Home = () => {
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content={title} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website"></meta>
         <meta
-          name="description"
-          content="Desenvolvedor mobile utilizando Swift e React Native"
-        />
+          property="og:url"
+          content="https://landing-page-nassi-atelie.vercel.app/"
+        ></meta>
+        <meta property="og:title" content={title}></meta>
+        <meta property="og:description" content={title}></meta>
+        <meta property="og:image" content="/images/profile.jpg"></meta>
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="/images/profile.jpg"></meta>
         <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            title
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={title} />
-        <meta name="twitter:card" content="/images/profile.png" />
+          property="twitter:url"
+          content="https://landing-page-nassi-atelie.vercel.app/"
+        ></meta>
+        <meta property="twitter:title" content={title}></meta>
+        <meta property="twitter:description" content={title}></meta>
+        <meta property="twitter:image" content="/images/profile.jpg"></meta>
       </Head>
       <header className={styles.header}>
         <Image
           priority
-          src="/images/profile.png"
+          src="/images/profile.jpg"
           className={styles.borderCircle}
           height={144}
           width={144}
