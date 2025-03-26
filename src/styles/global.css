@@ -3,8 +3,19 @@ html {
 }
 
 html {
+    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+	font-size: 16px;
     background-color: white;
     color: #4b5563;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+} 
+
+* {
+    box-sizing: border-box;
 }
 
 .black {
@@ -12,7 +23,7 @@ html {
 }
 
 .tags .tag + .tag {
-    margin-left: 8px;
+    margin-left: 4px;
 }
 
 .tag {
@@ -21,11 +32,6 @@ html {
     font-size: 10px;
     border-radius: 16px;
     color: black;
-}
-
-.tag.free {
-    background: #48AE26;
-    color: white;
 }
 
 @media (prefers-color-scheme: dark) {
