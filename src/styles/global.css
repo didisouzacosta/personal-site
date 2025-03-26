@@ -1,0 +1,23 @@
+html {
+    line-height: 24px;
+}
+
+html {
+    background-color: white;
+    color: #4b5563;
+}
+
+.black {
+    color: #1F1F1F;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: #1F1F1F;
+        color: #ABABAB;
+    }
+
+    .black {
+        color: white;
+    }   
+}
