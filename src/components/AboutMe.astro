@@ -3,32 +3,14 @@ import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components'
 
 import '../styles/global.css'
-
-import cleanerXcodeAppIcon from '../assets/apps/CleanerXcodeAppIcon.png';
-import formidableAppIcon from '../assets/apps/FormidableAppIcon.png';
-
-const apps = [
-	{ 
-		name: "CleanerXcode",
-		tag: "MacOS App",
-		image: cleanerXcodeAppIcon,
-		url: "https://github.com/didisouzacosta/CleanerXcode"
-	},
-	{
-		name: "Formidable",
-		tag: "Framework",
-		image: formidableAppIcon,
-		url: "https://github.com/didisouzacosta/Formidable"
-	}
-]
-
+import Projects from './Projects.astro';
 ---
 
 <div id="container">
 	<main>
 		<section>
 			<a href="https://github.com/didisouzacosta">
-				<Image src="https://avatars.githubusercontent.com/u/11352503?v=4" alt="Adriano Souza Costa" width="120" height="120" loading="lazy" class="avatar"/>
+				<Image src="https://avatars.githubusercontent.com/u/11352503?v=4" alt="Adriano Souza Costa" width="120" height="120" loading="eager" priority={true} class="avatar"/>
 			</a>
 			
 			<h1 class="name black">
@@ -50,71 +32,25 @@ const apps = [
 			</p>
 
 			<p id="social">
-				<a href="https://x.com/didisouzacosta" target="_blank">
+				<a href="https://x.com/didisouzacosta" target="_blank" aria-label="X" aria-labelledby="X">
 					<Icon name="x" class="social-icon black"/>
 				</a>
 
-				<a href="https://github.com/didisouzacosta" target="_blank">
+				<a href="https://github.com/didisouzacosta" target="_blank" aria-label="Github" aria-labelledby="Github">
 					<Icon name="github" class="social-icon black"/>
 				</a>
 
-				<a href="https://www.linkedin.com/in/adrianosouzacosta" target="_blank">
+				<a href="https://www.linkedin.com/in/adrianosouzacosta" target="_blank" aria-label="Linkedin" aria-labelledby="Linkedin">
 					<Icon name="linkedin" class="social-icon black"/>
 				</a>
 			</p>
 		</section>
 
-		<section id="projects">
-			<h3 class="black">Projects</h3>
-			<div class="apps">
-				{
-					apps.map((app) => {
-						return <a href={app.url} target="_blank">
-							<div class="app">
-								<Image src={app.image} alt={app.name} loading="lazy" class="app-icon"/>
-								<h4 class="app-title black">
-									{app.name}
-								</h4>
-		
-								<div class="tags">
-									<span class="tag">
-										{app.tag}
-									</span>
-								</div>
-							</div>
-						</a>
-					})
-				}
-			</div>
-		</section>
+		<Projects />
 	</main>
 </div>
 
 <style>
-	main {
-		max-width: 800px;
-		margin: 0 auto;
-		padding: 32px;
-	}
-
-	h1 {
-		margin-bottom: 0px;
-		padding-bottom: 0px;
-	}
-
-	a {
-		color: inherit;
-  		text-decoration: none;
-	}
-
-	a:hover {
-		opacity: 0.6;
-		transition: opacity .2s ease-out;
-		-moz-transition: opacity .2s ease-out;
-		-webkit-transition: opacity .2s ease-out;
-		-o-transition: opacity .2s ease-out;
-	}
-
 	img.avatar {
 		border-radius: 50%;
 	}
@@ -140,7 +76,8 @@ const apps = [
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-		height: 100vh;
+		min-height: 100vh;
+		align-items: center;
 	}
 
 	#social {
@@ -151,41 +88,8 @@ const apps = [
     	margin-left: 8px;
 	}
 
-	#projects {
-		margin-top: 64px;
-	}
-
-	#projects .apps {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		column-gap: 16px;
-  		row-gap: 16px;
-	}
-
-	#projects .apps .app {
-		text-align: center;
-	}
-
-	#projects .apps .app h4 {
-		margin: 0px;
-		padding: 0px;
-	}
-
-	#projects .apps .app .app-icon {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-
 	.social-icon {
 		width: 22px;
 		height: 22px;
-	}
-
-	@media only screen and (max-width: 768px) {
-		#projects .apps {
-			grid-template-columns: repeat(3, 1fr);
-			column-gap: 8px;
-		}
 	}
 </style>
