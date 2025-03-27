@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets';
+
+import '../styles/global.css'
+
+import cleanerXcodeAppIcon from '../assets/apps/CleanerXcodeAppIcon.png';
+import formidableAppIcon from '../assets/apps/FormidableAppIcon.png';
+
+const apps = [
+	{ 
+		name: "CleanerXcode",
+		tags: ["MacOS App", "Free"],
+		image: cleanerXcodeAppIcon,
+		url: "https://github.com/didisouzacosta/CleanerXcode"
+	},
+	{
+		name: "Formidable",
+		tags: ["Framework"],
+		image: formidableAppIcon,
+		url: "https://github.com/didisouzacosta/Formidable"
+	}
+]
+---
+
+<section id="projects">
+    <h3 class="black">
+        Projects
+    </h3>
+
+    <div class="apps">
+        {
+            apps.map((app) => {
+                return <a href={app.url} target="_blank">
+                    <div class="app">
+                        <Image src={app.image} alt={app.name} loading="eager" priority={true} class="app-icon"/>
+                        
+                        <h4 class="app-title black">
+                            {app.name}
+                        </h4>
+
+                        <div class="tags">
+                            {app.tags.map((tag) => {
+                                return <span class="tag">
+                                    {tag}
+                                </span>
+                            })}
+                        </div>
+                    </div>
+                </a>
+            })
+        }
+    </div>
+</section>
+
+<style>
+    #projects {
+		margin-top: 64px;
+	}
+
+	#projects .apps {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: max-content;
+		column-gap: 16px;
+  		row-gap: 16px;
+	}
+
+	#projects .apps .app {
+		text-align: center;
+	}
+
+    #projects .apps .app .app-icon {
+		max-width: 100%;
+        height: auto;
+		object-fit: cover;
+	}
+
+	#projects .apps .app h4 {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.social-icon {
+		width: 22px;
+		height: 22px;
+	}
+
+	@media only screen and (max-width: 768px) {
+		#projects .apps {
+			grid-template-columns: repeat(3, 1fr);
+			column-gap: 8px;
+		}
+	}
+</style>
