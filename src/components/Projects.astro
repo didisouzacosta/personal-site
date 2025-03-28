@@ -1,22 +1,17 @@
 ---
-import { Image } from 'astro:assets';
-
 import '../styles/global.css'
-
-import cleanerXcodeAppIcon from '/public/cleanerXcodeAppIcon.png';
-import formidableAppIcon from '/public/formidableAppIcon.png';
 
 const apps = [
 	{ 
 		name: "CleanerXcode",
 		tags: ["MacOS App", "Free"],
-		image: cleanerXcodeAppIcon,
+		imageUrl: "https://github.com/didisouzacosta/CleanerXcode/raw/main/app-icon.png",
 		url: "https://github.com/didisouzacosta/CleanerXcode"
 	},
 	{
 		name: "Formidable",
 		tags: ["Framework"],
-		image: formidableAppIcon,
+		imageUrl: "https://github.com/didisouzacosta/Formidable/raw/main/app-icon.png",
 		url: "https://github.com/didisouzacosta/Formidable"
 	}
 ]
@@ -32,7 +27,7 @@ const apps = [
             apps.map((app) => {
                 return <a href={app.url} target="_blank">
                     <div class="app">
-                        <Image src={app.image} alt={app.name} loading="eager" priority={true} class="app-icon"/>
+                        <img src={app.imageUrl} alt={app.name} loading="eager" class="app-icon"/>
                         
                         <h4 class="app-title black">
                             {app.name}
